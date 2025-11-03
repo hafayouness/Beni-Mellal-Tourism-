@@ -1,50 +1,62 @@
-# Welcome to your Expo app 👋
+🌄 Beni-Mellal Tourism
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Beni-Mellal Tourism est une application mobile interactive qui met en valeur les plus belles attractions touristiques de la région de Beni Mellal-Khénifra.
+L’application offre une expérience fluide, moderne et animée, permettant aux utilisateurs de découvrir les lieux emblématiques, d’ajouter leurs favoris et d’explorer des galeries d’images immersives.
 
-## Get started
+🧭 Fonctionnalités principales
 
-1. Install dependencies
+📋 Liste des attractions — Affichage des 6 sites touristiques avec animations et favoris
 
-   ```bash
-   npm install
-   ```
+❤️ Système de favoris — Ajout et suppression avec effet animé + persistance locale
 
-2. Start the app
+🖼️ Galerie de photos — Navigation fluide et interactive entre les images
 
-   ```bash
-   npx expo start
-   ```
+🔄 Pull-to-refresh — Actualisation des données facilement
 
-In the output, you'll find options to open the app in a
+⚡ Gestion d’état — Centralisée avec Zustand + sauvegarde avec MMKV
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+☁️ Connexion API — Données dynamiques récupérées via Axios
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+🎬 Animations Reanimated — Apparition des cartes, bouton cœur animé, transitions fluides
 
-## Get a fresh project
+🏗️ Stack Technique
+Technologie Rôle
+React Native (Expo) Base de l’application mobile
+Expo Router Navigation entre les écrans
+Zustand Gestion d’état global
+MMKV Sauvegarde locale ultra rapide
+Axios Requêtes HTTP vers l’API
+React Native Reanimated Animations fluides et performantes
+Gesture Handler Gestes de swipe et interactions naturelles
+🗺️ Contenu de l’application
 
-When you're ready, run:
+L’application présente les 6 attractions phares de la région :
 
-```bash
-npm run reset-project
-```
+Cascades d’Ouzoud — Chutes d’eau spectaculaires
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Ain Asserdoun — Source naturelle historique
 
-## Learn more
+Lac de Bin El Ouidane — Barrage et lac pittoresque
 
-To learn more about developing your project with Expo, look at the following resources:
+Kasbah Ras El Ain — Forteresse historique
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Parc National d’Ifrane — Nature et randonnées
 
-## Join the community
+Souk de Beni Mellal — Marché traditionnel vibrant
 
-Join our community of developers creating universal apps.
+💡 Objectif du projet
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Promouvoir le tourisme local de Beni Mellal-Khénifra à travers une application mobile moderne, animée et intuitive, combinant design, données dynamiques et interactivité.
+
+📱 Aperçu des écrans
+
+Écran 1 : Liste des attractions (cartes animées)
+
+Écran 2 : Détails d’une attraction (image, description, cœur animé)
+
+Écran 3 : Galerie swipeable (gestes + indicateur d’image)
+
+🧑‍💻 Auteur
+
+Projet développé par [youness hafa / hanan ragban]
+Dans le cadre d’un projet de promotion du tourisme local à Beni Mellal-Khénifra 🌍
