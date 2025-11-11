@@ -15,16 +15,11 @@ export default function Layout() {
         >
           <Stack.Screen name="index" />
           <Stack.Screen name="AttractionList" />
-          <Stack.Screen
-            name="details"
-          
-          />
+          <Stack.Screen name="details" />
+          <Stack.Screen name="city" />
+          <Stack.Screen name="favoris" />
+          <Stack.Screen name="gallery" />
         </Stack>
-      <Stack.Screen name="city" />
-      <Stack.Screen name="favoris" />
-      <Stack.Screen name="gallery" />
-
-
       </SafeAreaView>
     </GestureHandlerRootView>
   );

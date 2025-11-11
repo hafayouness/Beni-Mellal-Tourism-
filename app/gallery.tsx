@@ -38,7 +38,6 @@ export default function DetailsScreen() {
   const [favorite, setFavorite] = useState(false);
   const scrollRef = useRef<ScrollView>(null);
 
-  // Animation
   const slideAnim = useRef(new Animated.Value(height)).current;
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
@@ -51,18 +50,16 @@ export default function DetailsScreen() {
       }
       try {
         const url = `https://69086a582d902d0651b03223.mockapi.io/api/v1/places/${id}`;
-        //const res = await axios.get(url);
+
         const res = await axios.get<Place | null>(url);
 
         setPlace(res.data);
 
-        // Check favorite
         const stored = await AsyncStorage.getItem("favorites");
         const favs = stored ? JSON.parse(stored) : [];
         const isFav = favs.some((item: Place) => item.id === id);
         setFavorite(isFav);
 
-        // Start animation
         Animated.parallel([
           Animated.timing(slideAnim, {
             toValue: 0,
@@ -145,15 +142,21 @@ export default function DetailsScreen() {
         {place.images.map((img, idx) => (
           <View key={idx}>
             <Image source={{ uri: img }} style={styles.image} />
-            <TouchableOpacity style={styles.heartButton} onPress={toggleFavorite}>
-              <AntDesign name="heart" size={28} color={favorite ? "red" : "white"} />
+            <TouchableOpacity
+              style={styles.heartButton}
+              onPress={toggleFavorite}
+            >
+              <AntDesign
+                name="heart"
+                size={28}
+                color={favorite ? "red" : "white"}
+              />
             </TouchableOpacity>
           </View>
         ))}
       </ScrollView>
 
       {/* Dots */}
-     
 
       {/* Modal box with animation */}
       <Animated.View
@@ -172,14 +175,12 @@ export default function DetailsScreen() {
           <Text style={styles.textBtnfavoris}>Go to favoris</Text>
         </TouchableOpacity>
         {/* about ben mellal */}
-       <TouchableOpacity
+        <TouchableOpacity
           style={styles.bttnFavoris}
-                  onPress={() => router.push("/city" as any)
-}
+          onPress={() => router.push("/city" as any)}
         >
           <Text style={styles.textBtnfavoris}>Map</Text>
         </TouchableOpacity>
-       
       </Animated.View>
     </ScrollView>
   );
@@ -196,14 +197,27 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     padding: 6,
   },
-  dotsContainer: { flexDirection: "row",
-     justifyContent: "center", 
-     marginVertical: 10 },
+  dotsContainer: {
+    flexDirection: "row",
+    justifyContent: "center",
+    marginVertical: 10,
+  },
 
   activeDot: { backgroundColor: "#fff", borderWidth: 2, borderColor: "green" },
   textContainer: { paddingHorizontal: 20, paddingBottom: 40 },
-  title: { fontSize: 22, fontWeight: "bold", color: "#045109", marginBottom: 10, textAlign: "center" },
-  description: { fontSize: 16, color: "#555", textAlign: "justify", marginBottom: 20 },
+  title: {
+    fontSize: 22,
+    fontWeight: "bold",
+    color: "#045109",
+    marginBottom: 10,
+    textAlign: "center",
+  },
+  description: {
+    fontSize: 16,
+    color: "#555",
+    textAlign: "justify",
+    marginBottom: 20,
+  },
   center: { flex: 1, justifyContent: "center", alignItems: "center" },
   bttnFavoris: {
     width: 200,
