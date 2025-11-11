@@ -17,12 +17,14 @@ export default function Layout() {
           <Stack.Screen name="AttractionList" />
           <Stack.Screen
             name="details"
-            options={{
-              presentation: "modal",
-              animation: "slide_from_right",
-            }}
+          
           />
         </Stack>
+      <Stack.Screen name="city" />
+      <Stack.Screen name="favoris" />
+      <Stack.Screen name="gallery" />
+
+
       </SafeAreaView>
     </GestureHandlerRootView>
   );

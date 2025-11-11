@@ -47,7 +47,7 @@ export default function AttractionsList() {
 
   return (
     <View style={styles.cardsContainer}>
-      {attractions.map((item, index) => (
+      {attractions.map((item : any, index : any) => (
         <AttractionCard key={item.id} item={item} index={index} />
       ))}
     </View>
@@ -91,11 +91,7 @@ function AttractionCard({ item, index }: { item: Attraction; index: number }) {
         onPress={() =>
           router.push({
             pathname: "/details",
-            params: {
-              name: item.name,
-              description: item.description,
-              image: item.image,
-            },
+           
           })
         }
       >
