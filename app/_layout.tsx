@@ -19,12 +19,13 @@ export default function Layout() {
             name="details"
           
           />
+          <Stack.Screen name="city" />
+         <Stack.Screen name="favoris" />
+         <Stack.Screen name="gallery" />
+
+
         </Stack>
-      <Stack.Screen name="city" />
-      <Stack.Screen name="favoris" />
-      <Stack.Screen name="gallery" />
-
-
+      
       </SafeAreaView>
     </GestureHandlerRootView>
   );
